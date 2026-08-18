@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OrgSprint Changelog</title>
+<meta name="description" content="Version history and release notes for the OrgSprint Chrome extension.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="wordmark" href="index.html">
+    <span class="mark">O</span>
+    <span class="name">OrgSprint</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="docs.html">Docs</a>
+    <a href="changelog.html" class="current">Changelog</a>
+    <a href="https://juholee1010.github.io/orgsprint-privacy/">Privacy</a>
+  </div>
+  <a class="btn btn-accent" href="https://chromewebstore.google.com/detail/orgsprint/cbginomfccmoihbkdgajocalehbdijlm">Add to Chrome</a>
+</nav>
+
+<div class="page page-narrow">
+
+  <header class="doc-header">
+    <p class="eyebrow">Release Notes</p>
+    <h1>Changelog</h1>
+    <p>What's new in each version of OrgSprint.</p>
+  </header>
+
+  <div class="changelog-list">
+
+    <article class="changelog-entry">
+      <div class="changelog-meta">
+        <span class="version-badge">0.38.6</span><br>
+        <span class="changelog-date">Submitted for review</span>
+      </div>
+      <div class="changelog-body">
+        <h3>Flow relationships, and a bigger Flow list panel</h3>
+        <span class="tag tag-feature">Feature</span>
+        <span class="tag tag-fix">Fix</span>
+        <ul>
+          <li>Inside Flow Builder, the panel now shows which Flows this one <strong>calls</strong> as subflows, and — on demand — which Flows <strong>call it back</strong>, with one-click jumps between them.</li>
+          <li>Fixed the inline panel on the Setup &gt; Flows list page being capped at a small fixed height. It now opens much taller by default and can be dragged even larger.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="changelog-entry">
+      <div class="changelog-meta">
+        <span class="version-badge">0.38.5</span><br>
+        <span class="changelog-date">August 18, 2026</span>
+      </div>
+      <div class="changelog-body">
+        <h3>Smaller permission footprint</h3>
+        <span class="tag tag-fix">Fix</span>
+        <ul>
+          <li>Removed the <code>scripting</code> and <code>activeTab</code> permissions — OrgSprint never used them; everything already runs through the standard content-script + host-permission model.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="changelog-entry">
+      <div class="changelog-meta">
+        <span class="version-badge">0.38.4</span><br>
+        <span class="changelog-date">Initial release</span>
+      </div>
+      <div class="changelog-body">
+        <h3>First public version</h3>
+        <span class="tag tag-feature">Feature</span>
+        <ul>
+          <li>Flow management: list, filter, activate/deactivate, version history, unused-resource cleanup</li>
+          <li>Object &amp; record browser with inline editing</li>
+          <li>Visual SOQL query builder with relationship traversal and CSV export</li>
+          <li>Live Apex debug log viewer</li>
+          <li>Quick Search command palette, field API-name overlay, and record Id copy utility</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="page">
+    <span>OrgSprint — an independent tool, not affiliated with or endorsed by Salesforce.com, inc.</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="docs.html">Docs</a>
+      <a href="https://juholee1010.github.io/orgsprint-privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

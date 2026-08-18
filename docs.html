@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OrgSprint Docs</title>
+<meta name="description" content="How to use every feature in OrgSprint: Flow management, object/record browsing, the visual SOQL builder, debug logs, and more.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="wordmark" href="index.html">
+    <span class="mark">O</span>
+    <span class="name">OrgSprint</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="docs.html" class="current">Docs</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="https://juholee1010.github.io/orgsprint-privacy/">Privacy</a>
+  </div>
+  <a class="btn btn-accent" href="https://chromewebstore.google.com/detail/orgsprint/cbginomfccmoihbkdgajocalehbdijlm">Add to Chrome</a>
+</nav>
+
+<div class="page page-narrow">
+
+  <header class="doc-header">
+    <p class="eyebrow">Documentation</p>
+    <h1>How to use OrgSprint</h1>
+    <p>Everything below works on top of your normal Salesforce session — nothing to configure, nothing to log into separately.</p>
+  </header>
+
+  <nav class="toc">
+    <a href="#getting-started">Getting started</a>
+    <a href="#flows">Flow management</a>
+    <a href="#relationships">Flow relationships</a>
+    <a href="#objects">Object &amp; record browser</a>
+    <a href="#soql">Visual SOQL builder</a>
+    <a href="#debug-logs">Debug logs</a>
+    <a href="#quick-search">Quick search</a>
+    <a href="#field-utilities">Field &amp; record utilities</a>
+  </nav>
+
+  <section class="doc-section" id="getting-started">
+    <h2><span class="num">01</span> Getting started</h2>
+    <p>After installing, open any Salesforce or Salesforce Setup page. A small round toggle button appears near the bottom-right corner of the screen — click it to slide the OrgSprint panel open. Click it again (or the panel's close button) to hide it.</p>
+    <p>The panel remembers its size and position between visits, and always operates on your currently-logged-in org — there's no separate sign-in step.</p>
+  </section>
+
+  <section class="doc-section" id="flows">
+    <h2><span class="num">02</span> Flow management</h2>
+    <p>Open the panel and click the <strong>Flows</strong> tab to see every Flow in the org in one list.</p>
+    <ol>
+      <li>Use the search box or the <strong>All / Active / Inactive</strong> filters to narrow the list.</li>
+      <li>Click a Flow to expand its version table — <strong>Open</strong>, <strong>Run</strong>, <strong>Activate</strong>, or <strong>Deactivate</strong> any version directly from the row, no page reload required.</li>
+      <li>Expand a Flow's detail to scan it for unused variables, constants, and formulas. Select the ones you want gone and click <strong>Remove</strong> — OrgSprint either updates the existing Draft in place, or creates a new Draft version if the current one is Active.</li>
+    </ol>
+    <p>Opening a Setup &gt; Flows list page auto-opens this panel inline, right above the native list, so it's there the moment you land on the page.</p>
+  </section>
+
+  <section class="doc-section" id="relationships">
+    <h2><span class="num">03</span> Flow relationships</h2>
+    <p>When you open one specific Flow in Flow Builder, OrgSprint auto-opens a focused panel for just that Flow, showing two things beyond unused-resource cleanup:</p>
+    <ul>
+      <li><strong>Calls</strong> — the other Flows this one invokes as a subflow. Click any of them to jump straight into that Flow's Builder.</li>
+      <li><strong>Used in</strong> — click <strong>Find flows that call this one…</strong> to have OrgSprint check every Flow in the org for a reference back to this one. Salesforce doesn't expose this anywhere natively, so this takes a few seconds — it's genuinely scanning the whole org's Flow metadata, not reading from a cached index.</li>
+    </ul>
+    <p>Both rows are clickable and take you directly into the related Flow's Builder view.</p>
+  </section>
+
+  <section class="doc-section" id="objects">
+    <h2><span class="num">04</span> Object &amp; record browser</h2>
+    <p>Click the <strong>Objects</strong> tab and search for any standard or custom object — no Tab needs to exist for it to show up.</p>
+    <ol>
+      <li>Pick an object to see its records, or click <strong>List View</strong> to jump straight to Salesforce's native list view for it.</li>
+      <li>Fields are editable inline in the record list — picklists, multi-select picklists, and checkboxes included — so a single-field fix doesn't require opening the full record page.</li>
+      <li>Lookup fields are clickable and take you straight to the related record.</li>
+    </ol>
+  </section>
+
+  <section class="doc-section" id="soql">
+    <h2><span class="num">05</span> Visual SOQL builder</h2>
+    <p>Click the <strong>SOQL</strong> tab, then <strong>Build a query</strong> to construct one visually instead of typing API names from memory.</p>
+    <ol>
+      <li>Search for and select an object, then check the fields you want — including fields on related objects, which OrgSprint expands into the correct relationship dot-notation automatically. Polymorphic lookups are handled without extra setup.</li>
+      <li>Run the query to see results inline. Edit values directly in the result grid, or export the whole result set to CSV.</li>
+      <li>Every query you run is saved to history, so you can re-run or tweak a past query instead of rebuilding it.</li>
+      <li>Click the pop-out icon in the header to move the SOQL editor into its own separate browser window if you want more room to work.</li>
+    </ol>
+  </section>
+
+  <section class="doc-section" id="debug-logs">
+    <h2><span class="num">06</span> Debug logs</h2>
+    <p>Click the 🐛 button in any panel header to toggle Apex debug logging on or off for yourself — this replaces manually creating a Trace Flag in Setup.</p>
+    <p>Open the debug log viewer to see your recent logs, filter down to just the lines you care about (or toggle <strong>Debug only</strong> to strip everything else), then copy or download what you need.</p>
+  </section>
+
+  <section class="doc-section" id="quick-search">
+    <h2><span class="num">07</span> Quick search</h2>
+    <p>From anywhere on a Salesforce page, press <span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">K</span> (or <span class="kbd">Cmd</span>+<span class="kbd">Shift</span>+<span class="kbd">K</span> on Mac) to open a fuzzy-search overlay across Objects, Apex Classes, and Flows. Start typing and pick a result to jump straight there — no need to open the full panel first.</p>
+  </section>
+
+  <section class="doc-section" id="field-utilities">
+    <h2><span class="num">08</span> Field &amp; record utilities</h2>
+    <p>On any Lightning record page, hover a field's label to see a tooltip with its API name and type. A small link appears next to tagged fields — click it to jump straight to that field's detail page in Object Manager.</p>
+    <p>A small widget in the bottom-left corner of record pages lets you copy the current record's Id in either 15- or 18-character form with one click.</p>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="page">
+    <span>OrgSprint — an independent tool, not affiliated with or endorsed by Salesforce.com, inc.</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="https://juholee1010.github.io/orgsprint-privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

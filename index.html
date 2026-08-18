@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OrgSprint — Salesforce admin tools in one panel</title>
+<meta name="description" content="OrgSprint is a Chrome extension that puts Flow management, an object/record browser, a visual SOQL query builder, and debug logs directly on top of your Salesforce org.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="wordmark" href="index.html">
+    <span class="mark">O</span>
+    <span class="name">OrgSprint</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="current">Home</a>
+    <a href="docs.html">Docs</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="https://juholee1010.github.io/orgsprint-privacy/">Privacy</a>
+  </div>
+  <a class="btn btn-accent" href="https://chromewebstore.google.com/detail/orgsprint/cbginomfccmoihbkdgajocalehbdijlm">Add to Chrome</a>
+</nav>
+
+<div class="page">
+
+  <header class="hero">
+    <p class="eyebrow">Chrome Extension for Salesforce</p>
+    <h1>Every Salesforce admin tool you use daily, in one panel</h1>
+    <p>Flows, records, SOQL queries, and debug logs — right on top of whatever Salesforce page you're already on. No new tabs, no digging through Setup, no OrgSprint server in between.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="https://chromewebstore.google.com/detail/orgsprint/cbginomfccmoihbkdgajocalehbdijlm">Add to Chrome — it's free</a>
+      <a class="btn btn-ghost" href="docs.html">Read the docs</a>
+    </div>
+  </header>
+
+  <div class="gallery">
+    <img src="screenshots/3-flows.png" alt="OrgSprint Flow management panel showing active and inactive flow versions">
+    <img src="screenshots/2-objects.png" alt="OrgSprint object and record browser">
+    <img src="screenshots/5-soql-builder.png" alt="OrgSprint visual SOQL query builder">
+    <img src="screenshots/1-soql-results.png" alt="OrgSprint SOQL query results">
+    <img src="screenshots/4-debug-log.png" alt="OrgSprint debug log viewer">
+  </div>
+
+  <div class="section-head">
+    <h2>What it does</h2>
+    <p>Four tools that live in Setup today, minus the page reloads and tab-switching.</p>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="icon">⚡</div>
+      <h3>Flow Management</h3>
+      <p>List, filter, and search every Flow in the org.</p>
+      <ul>
+        <li>Activate, deactivate, and switch versions inline</li>
+        <li>Clean up unused variables/constants/formulas into a new draft</li>
+        <li>See which flows a flow calls, and which flows call it — jump straight between them</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🗂️</div>
+      <h3>Object &amp; Record Browser</h3>
+      <p>Search any standard or custom object without needing a Tab.</p>
+      <ul>
+        <li>Inline-editable fields — picklists, multi-picklists, booleans included</li>
+        <li>Jump to related records through lookups</li>
+        <li>One click to a native list view</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔎</div>
+      <h3>Visual SOQL Builder</h3>
+      <p>Build queries by picking objects and fields — no API names required.</p>
+      <ul>
+        <li>Relationship traversal and polymorphic lookups handled automatically</li>
+        <li>Edit results inline, export to CSV, reuse query history</li>
+        <li>Pop the editor into its own window</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🐛</div>
+      <h3>Debug Logs</h3>
+      <p>Enable, view, and filter your own Apex debug logs without leaving the page.</p>
+      <ul>
+        <li>One-click toggle — no manual Trace Flag setup</li>
+        <li>Filter down to just the lines you care about</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="icon">⌘</div>
+      <h3>Quick Search</h3>
+      <p>Press <span class="kbd">Ctrl/Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">K</span> anywhere on a Salesforce page.</p>
+      <ul>
+        <li>Fuzzy search objects, Apex classes, and Flows</li>
+        <li>Jump straight to the right place, from any page</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🏷️</div>
+      <h3>Field &amp; Record Utilities</h3>
+      <p>Small conveniences that add up.</p>
+      <ul>
+        <li>Hover a field label to see its API name, click to jump to its Setup detail</li>
+        <li>One-click copy of the current record's 15- or 18-character Id</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Privacy by design</h2>
+    <p>OrgSprint talks directly to your own Salesforce org using your existing session. There's no OrgSprint server in between, and nothing is cached except a few local UI preferences on your own device.</p>
+    <a class="btn btn-ghost" href="https://juholee1010.github.io/orgsprint-privacy/">Read the full privacy policy</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="page">
+    <span>OrgSprint — an independent tool, not affiliated with or endorsed by Salesforce.com, inc.</span>
+    <div class="footer-links">
+      <a href="docs.html">Docs</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="https://juholee1010.github.io/orgsprint-privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
