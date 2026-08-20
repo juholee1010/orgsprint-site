@@ -177,22 +177,48 @@ code {
   flex-wrap: wrap;
 }
 
-/* ---------- Gallery ---------- */
-.gallery {
-  display: flex;
-  gap: 14px;
-  overflow-x: auto;
-  padding: 8px 4px 20px;
-  margin: 40px 0;
-  scroll-snap-type: x proximity;
+/* ---------- Showcase ---------- */
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px 24px;
+  margin: 48px 0;
 }
-.gallery img {
-  height: 320px;
+.showcase-item {
+  margin: 0;
+}
+.browser-frame {
   border-radius: 10px;
+  overflow: hidden;
   border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  scroll-snap-align: start;
-  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(20, 20, 20, 0.08);
+  background: var(--surface);
+}
+.browser-frame-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: var(--mono-bg);
+  border-bottom: 1px solid var(--line);
+}
+.browser-frame-bar .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+}
+.browser-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.showcase-item figcaption {
+  margin: 12px 2px 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  text-align: center;
 }
 
 /* ---------- Feature grid ---------- */
