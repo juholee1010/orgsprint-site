@@ -39,35 +39,45 @@
     <figure class="showcase-item">
       <div class="browser-frame">
         <div class="browser-frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <img src="screenshots/3-flows.png" alt="OrgSprint Flow management panel showing active and inactive flow versions">
+        <button class="showcase-zoom" data-full="screenshots/3-flows.png" aria-label="View larger screenshot">
+          <img src="screenshots/3-flows.png" alt="OrgSprint Flow management panel showing active and inactive flow versions">
+        </button>
       </div>
       <figcaption>Flow management — filter, activate, and inspect versions at a glance</figcaption>
     </figure>
     <figure class="showcase-item">
       <div class="browser-frame">
         <div class="browser-frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <img src="screenshots/2-objects.png" alt="OrgSprint object and record browser">
+        <button class="showcase-zoom" data-full="screenshots/2-objects.png" aria-label="View larger screenshot">
+          <img src="screenshots/2-objects.png" alt="OrgSprint object and record browser">
+        </button>
       </div>
       <figcaption>Browse and search any object's records, right inside the panel</figcaption>
     </figure>
     <figure class="showcase-item">
       <div class="browser-frame">
         <div class="browser-frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <img src="screenshots/5-soql-builder.png" alt="OrgSprint visual SOQL query builder">
+        <button class="showcase-zoom" data-full="screenshots/5-soql-builder.png" aria-label="View larger screenshot">
+          <img src="screenshots/5-soql-builder.png" alt="OrgSprint visual SOQL query builder">
+        </button>
       </div>
       <figcaption>Build SOQL visually — pick fields, no API names required</figcaption>
     </figure>
     <figure class="showcase-item">
       <div class="browser-frame">
         <div class="browser-frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <img src="screenshots/1-soql-results.png" alt="OrgSprint SOQL query results">
+        <button class="showcase-zoom" data-full="screenshots/1-soql-results.png" aria-label="View larger screenshot">
+          <img src="screenshots/1-soql-results.png" alt="OrgSprint SOQL query results">
+        </button>
       </div>
       <figcaption>Query results, editable inline and exportable to CSV</figcaption>
     </figure>
     <figure class="showcase-item">
       <div class="browser-frame">
         <div class="browser-frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <img src="screenshots/4-debug-log.png" alt="OrgSprint debug log viewer">
+        <button class="showcase-zoom" data-full="screenshots/4-debug-log.png" aria-label="View larger screenshot">
+          <img src="screenshots/4-debug-log.png" alt="OrgSprint debug log viewer">
+        </button>
       </div>
       <figcaption>Apex debug logs, filtered and readable without leaving the page</figcaption>
     </figure>
@@ -156,6 +166,32 @@
     </div>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">✕</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.showcase-zoom').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      lightboxImg.src = btn.dataset.full;
+      lightboxImg.alt = btn.querySelector('img').alt;
+      lightbox.classList.add('open');
+    });
+  });
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  }
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-close')) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 </body>
 </html>
