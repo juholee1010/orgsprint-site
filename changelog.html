@@ -35,6 +35,61 @@
 
     <article class="changelog-entry">
       <div class="changelog-meta">
+        <span class="version-badge">0.39.16</span><br>
+        <span class="changelog-date">Submitted for review</span>
+      </div>
+      <div class="changelog-body">
+        <h3>Access Inspector — see exactly why a user can or can't do something</h3>
+        <span class="tag tag-feature">Feature</span>
+        <span class="tag tag-fix">Fix</span>
+        <ul>
+          <li>New tab: pick a User, Permission Set, or Profile plus an Object, and see the combined object-level CRUD (Create/Read/Edit/Delete/View All/Modify All) and field-level security in one place — a common "why can/can't this user do X" question, answered without hunting across multiple Setup pages.</li>
+          <li>Permission Sets and Profiles can be edited directly, including a bulk "set every visible field" toggle for wide objects.</li>
+          <li>Surfaces "View All Data" / "Modify All Data" org-wide overrides with a warning banner when they make the object-level settings below moot.</li>
+          <li>One click opens that object's actual permission page in Setup for the picked subject.</li>
+          <li>Fixed several causes of the extension freezing the tab after extended use — background listeners and timers that were accumulating on every panel switch instead of being cleaned up.</li>
+          <li>Object and field search no longer clutters results with Feed/Share/History/Custom Metadata Type noise, or with a field's non-independently-controllable compound sub-components (Address/Geolocation).</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="changelog-entry">
+      <div class="changelog-meta">
+        <span class="version-badge">0.38.18</span><br>
+        <span class="changelog-date">Submitted for review</span>
+      </div>
+      <div class="changelog-body">
+        <h3>Freely resizable panels, SOQL history gets its own window</h3>
+        <span class="tag tag-feature">Feature</span>
+        <span class="tag tag-fix">Fix</span>
+        <ul>
+          <li>The floating panel now resizes from all 8 edges and corners, and dropdowns/menus can no longer get clipped by a panel's own scroll area.</li>
+          <li>SOQL query history now opens as its own small window instead of a cramped in-panel dropdown.</li>
+          <li>Command Palette's result cap raised so real matches don't get cut off in large orgs, and its keyboard shortcut is now more reliable against Salesforce's own handlers.</li>
+          <li>The panel no longer auto-closes when you click outside it.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="changelog-entry">
+      <div class="changelog-meta">
+        <span class="version-badge">0.38.10</span><br>
+        <span class="changelog-date">August 18, 2026</span>
+      </div>
+      <div class="changelog-body">
+        <h3>Real inline editing for the Object browser, resizable SOQL builder</h3>
+        <span class="tag tag-feature">Feature</span>
+        <span class="tag tag-fix">Fix</span>
+        <ul>
+          <li>Object browser now supports real inline editing plus bulk delete, not just viewing.</li>
+          <li>SOQL builder's object and field lists are now resizable, and relationship fields auto-include the Id needed to make them editable.</li>
+          <li>Always-visible Setup shortcuts (Flow Setup / Object Manager / Paused Flows / Developer Console) from every panel.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="changelog-entry">
+      <div class="changelog-meta">
         <span class="version-badge">0.38.6</span><br>
         <span class="changelog-date">Submitted for review</span>
       </div>
