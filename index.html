@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OrgSprint — Salesforce admin tools in one panel</title>
-<meta name="description" content="OrgSprint is a Chrome extension that puts Flow management, an object/record browser, a visual SOQL query builder, and debug logs directly on top of your Salesforce org.">
+<meta name="description" content="OrgSprint is a Chrome extension that puts Flow management, an object/record browser, a visual SOQL query builder, an access/permission inspector, and debug logs directly on top of your Salesforce org.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
   <header class="hero">
     <p class="eyebrow">Chrome Extension for Salesforce</p>
     <h1>Every Salesforce admin tool you use daily, in one panel</h1>
-    <p>Flows, records, SOQL queries, and debug logs — right on top of whatever Salesforce page you're already on. No new tabs, no digging through Setup, no OrgSprint server in between.</p>
+    <p>Flows, records, SOQL queries, access/permissions, and debug logs — right on top of whatever Salesforce page you're already on. No new tabs, no digging through Setup, no OrgSprint server in between.</p>
     <div class="hero-actions">
       <a class="btn btn-accent" href="https://chromewebstore.google.com/detail/orgsprint/cbginomfccmoihbkdgajocalehbdijlm">Add to Chrome — it's free</a>
       <a class="btn btn-ghost" href="docs.html">Read the docs</a>
@@ -85,7 +85,7 @@
 
   <div class="section-head">
     <h2>What it does</h2>
-    <p>Four tools that live in Setup today, minus the page reloads and tab-switching.</p>
+    <p>Five tools that live in Setup today, minus the page reloads and tab-switching.</p>
   </div>
 
   <div class="feature-grid">
@@ -120,6 +120,16 @@
       </ul>
     </div>
     <div class="feature-card">
+      <div class="icon">🔐</div>
+      <h3>Access Inspector</h3>
+      <p>See exactly why a User, Permission Set, or Profile can or can't do something.</p>
+      <ul>
+        <li>Combined object-level CRUD and field-level security in one place, editable directly</li>
+        <li>Compare two Permission Sets or Profiles side-by-side — see only what's different</li>
+        <li>Surfaces org-wide View All Data / Modify All Data overrides before they cause confusion</li>
+      </ul>
+    </div>
+    <div class="feature-card">
       <div class="icon">🐛</div>
       <h3>Debug Logs</h3>
       <p>Enable, view, and filter your own Apex debug logs without leaving the page.</p>
@@ -142,7 +152,7 @@
       <h3>Field &amp; Record Utilities</h3>
       <p>Small conveniences that add up.</p>
       <ul>
-        <li>Hover a field label to see its API name, click to jump to its Setup detail</li>
+        <li>Hover a field label to see its API name, click to copy it, right-click for more (Object Manager, copy label)</li>
         <li>One-click copy of the current record's 15- or 18-character Id</li>
       </ul>
     </div>
